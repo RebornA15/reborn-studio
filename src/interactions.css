@@ -1,0 +1,65 @@
+/* Button geometry and content stay fixed; only the background layer wipes. */
+.ui-button, .ui-control {
+  position: relative;
+  isolation: isolate;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  --button-wipe-surface: var(--text-primary);
+  --button-wipe-ink: var(--bg-primary);
+  transition: color 220ms var(--button-wipe-ease);
+}
+.ui-button:not(.ui-text-action)::before, .ui-control::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--button-wipe-surface);
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--button-wipe-duration) var(--button-wipe-ease);
+}
+.ui-light {
+  --button-wipe-surface: var(--bg-primary);
+  --button-wipe-ink: var(--text-primary);
+}
+.ui-arrow { display: inline-flex; align-items: center; flex-shrink: 0; color: inherit; }
+/* Pointer focus stays invisible; the global :focus-visible rule serves keyboards. */
+:is(.ui-button, .ui-control):focus:not(:focus-visible) { outline: none; }
+.ui-link, .ui-plain-link { position: relative; transition: color var(--motion-duration) var(--motion-ease), opacity var(--motion-duration) var(--motion-ease); }
+.ui-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--motion-duration) var(--motion-ease);
+  pointer-events: none;
+}
+.nav-link.active { color: var(--text-primary); opacity: 1; }
+.nav-link.active::after { content: none; }
+.ui-project-image { transition: filter var(--motion-duration) var(--motion-ease); }
+@media(hover: hover) and (pointer: fine) {
+  :is(.ui-button:not(.ui-text-action), .ui-control):not(:disabled):not([aria-disabled="true"]):hover::before { transform: scaleX(1); }
+  :is(.ui-button:not(.ui-text-action), .ui-control):not(:disabled):not([aria-disabled="true"]):hover {
+    color: var(--button-wipe-ink);
+    transition-delay: 100ms;
+  }
+  :is(.ui-button, .ui-control):not(:disabled):not([aria-disabled="true"]):hover .ui-arrow { color: inherit; }
+  :is(.ui-link, .ui-plain-link):not([aria-disabled="true"]):hover { color: var(--text-primary); }
+  .ui-link:not([aria-disabled="true"]):hover::after { transform: scaleX(1); }
+  .ui-project:not(:disabled):not([aria-disabled="true"]):hover .ui-project-image { filter: contrast(1.025); }
+}
+:is(.ui-link, .ui-plain-link):not([aria-disabled="true"]):active { opacity: .8; }
+:is(.ui-button, .ui-control, .ui-project):disabled,
+:is(.ui-button, .ui-control, .ui-project, .ui-link)[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
+@media(prefers-reduced-motion: reduce) {
+  .ui-button::before, .ui-control::before { transition: none; }
+  .ui-button, .ui-control { transition: none; }
+}

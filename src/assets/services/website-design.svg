@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="440" viewBox="0 0 600 440" fill="none">
+  <defs>
+    <linearGradient id="surface" x1="80" y1="40" x2="420" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#48464d"/><stop offset="1" stop-color="#202025"/></linearGradient>
+    <linearGradient id="accent" x1="230" y1="140" x2="420" y2="330" gradientUnits="userSpaceOnUse"><stop stop-color="#a33e70"/><stop offset=".55" stop-color="#d56b60"/><stop offset="1" stop-color="#f29564"/></linearGradient>
+    <linearGradient id="fold"><stop stop-color="#f1c0a9"/><stop offset=".38" stop-color="#a14b65"/><stop offset="1" stop-color="#392b38"/></linearGradient>
+  </defs>
+  <g transform="translate(30 14) rotate(-8 270 210)">
+    <rect x="104" y="42" width="375" height="280" rx="4" fill="#18181c" stroke="#4b474f"/>
+    <path d="M105 70H478" stroke="#4b474f"/><circle cx="120" cy="57" r="3" fill="#a0808d"/><circle cx="132" cy="57" r="3" fill="#66636d"/><circle cx="144" cy="57" r="3" fill="#66636d"/>
+    <rect x="64" y="99" width="375" height="284" rx="4" fill="url(#surface)" stroke="#65616a"/>
+    <path d="M65 127H438" stroke="#68616a"/>
+    <circle cx="81" cy="113" r="3" fill="#d38b8b"/><circle cx="93" cy="113" r="3" fill="#78727a"/><circle cx="105" cy="113" r="3" fill="#78727a"/>
+    <path d="M90 153H126" stroke="#ddd6d2" stroke-width="4"/><path d="M337 153H356M367 153H386M397 153H415" stroke="#87828b" stroke-width="2"/>
+    <path d="M90 191H214M90 208H190M90 225H201" stroke="#eee7df" stroke-width="9"/>
+    <path d="M90 252H204M90 261H183" stroke="#96909d" stroke-width="3"/>
+    <rect x="90" y="282" width="67" height="21" fill="#e6ddd5"/><path d="M102 293H144" stroke="#363039" stroke-width="2"/>
+    <rect x="245" y="177" width="169" height="151" rx="2" fill="url(#accent)"/>
+    <path d="M280 313V234C280 196 377 195 377 234V313H353V236C353 219 305 219 305 236V313Z" fill="url(#fold)"/>
+    <path d="M90 348H171M189 348H268M286 348H412" stroke="#66606c" stroke-width="3"/>
+  </g>
+  <g transform="translate(382 303) rotate(7)"><rect width="131" height="79" rx="3" fill="#303036" stroke="#77707c"/><rect x="13" y="14" width="29" height="29" fill="#b65d79"/><path d="M53 20H115M53 30H97M13 59H115" stroke="#b5acb7" stroke-width="3"/></g>
+</svg>

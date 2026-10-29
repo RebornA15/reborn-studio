@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+:root {
+  color-scheme: dark;
+  --bg-primary: #151517;
+  --bg-secondary: #232328;
+  --bg-soft: #1C1C20;
+  --text-primary: #F5F2EE;
+  --text-secondary: #AFAFB7;
+  --text-tertiary: #AFAFB7;
+  --text-inverse: #F5F2EE;
+  --text-deep: #FF823F;
+  --magenta: #EA398D;
+  --orange: #FF823F;
+  --accent: #EA398D;
+  --brand-navy: #232328;
+  --accent-hover: #F657A0;
+  --focus-ring: #D4D0CB;
+  --border-color: rgba(245,242,238,.10);
+  --border-strong: rgba(245,242,238,.20);
+  --nav-bg: rgba(21,21,23,.94);
+  --card-bg: #232328;
+  --card-bg-strong: #232328;
+  --section-soft: #1C1C20;
+  --shadow-soft: 0 18px 40px rgba(0,0,0,.12);
+  --font-display: 'Space Grotesk', 'Instrument Sans', sans-serif;
+  --font-serif: var(--font-display);
+  --font-sans: 'Instrument Sans', sans-serif;
+  --button-wipe-duration: 450ms;
+  --button-wipe-ease: cubic-bezier(.76,0,.24,1);
+  --motion-duration: 260ms;
+  --motion-ease: cubic-bezier(.2,.8,.2,1);
+  --ease-luxury: cubic-bezier(.2,.8,.2,1);
+  --space: clamp(20px,4vw,64px);
+  --container-max-width: 1400px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { position: relative; background: var(--bg-primary); }
+::selection { background: #EA398D; color: #151517; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 24px;
+}
+
+.label-text {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+p {
+  max-width: 70ch;
+  line-height: 1.55;
+}
+
+button,
+a,
+input,
+textarea {
+  font-family: var(--font-sans);
+}
+
+:is(button, a, input, textarea, [tabindex]):not(.field-input):focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  scroll-margin-top: 100px;
+}
+
+
+/* Prevent image overflow and ensure images are layout-safe */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reduce animation intensity and heavy blurs on smaller devices */
+@media (max-width: 768px) {
+  :root {
+    --ease-luxury: cubic-bezier(0.2, 0.9, 0.3, 1);
+  }
+
+  /* Lower heavy backdrop-filter and blur values to reduce repaints */
+  .navbar,
+  .project-card,
+  .pd-card,
+  body::after {
+    -webkit-backdrop-filter: blur(6px) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

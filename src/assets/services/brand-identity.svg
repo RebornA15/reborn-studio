@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="440" viewBox="0 0 600 440" fill="none">
+  <defs><linearGradient id="paper" x2="1" y2="1"><stop stop-color="#58505a"/><stop offset="1" stop-color="#29262e"/></linearGradient><linearGradient id="ink" x2="1" y2="1"><stop stop-color="#f4b98f"/><stop offset=".5" stop-color="#dd7e78"/><stop offset="1" stop-color="#ac426c"/></linearGradient></defs>
+  <g transform="rotate(-12 280 220)">
+    <rect x="125" y="73" width="269" height="286" fill="#17171c" stroke="#4c454f"/>
+    <rect x="148" y="56" width="269" height="286" fill="url(#paper)" stroke="#706673"/>
+    <path d="M172 87H220M345 87H393" stroke="#b7aab8" stroke-width="3"/>
+    <path d="M208 269V132H272C322 132 332 187 293 204L329 269H292L255 208H241V269ZM241 160V181H270C286 181 286 160 270 160Z" fill="url(#ink)"/>
+    <path d="M172 310H260" stroke="#e3d6d7" stroke-width="4"/>
+    <path d="M351 306H393M351 315H380" stroke="#a89ba9" stroke-width="2"/>
+  </g>
+  <g transform="rotate(13 407 260)">
+    <rect x="337" y="193" width="144" height="144" fill="#e6dcd2"/>
+    <path d="M409 213L424 240L455 239L440 267L456 294L424 294L409 322L393 294L362 294L378 267L363 239L394 240Z" fill="#29232d"/>
+    <circle cx="409" cy="267" r="15" fill="#d97b76"/>
+  </g>
+  <g transform="rotate(-12 205 355)"><rect x="152" y="341" width="43" height="26" fill="#a8416c"/><rect x="195" y="341" width="43" height="26" fill="#d87b79"/><rect x="238" y="341" width="43" height="26" fill="#edb892"/></g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="440" viewBox="0 0 600 440" fill="none">
+  <defs>
+    <linearGradient id="panel" x1="140" y1="100" x2="420" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#51515a"/><stop offset="1" stop-color="#25272e"/></linearGradient>
+    <linearGradient id="campaign" x1="175" y1="170" x2="284" y2="274" gradientUnits="userSpaceOnUse"><stop stop-color="#9d426e"/><stop offset=".6" stop-color="#cd777d"/><stop offset="1" stop-color="#edaa82"/></linearGradient>
+    <linearGradient id="target" x1="386" y1="63" x2="487" y2="176" gradientUnits="userSpaceOnUse"><stop stop-color="#efb28e"/><stop offset="1" stop-color="#ac4f77"/></linearGradient>
+  </defs>
+  <!-- A campaign placement connects search visibility to a defined audience. -->
+  <path d="M117 281H74V120H177M423 294H510V221H466M392 116H446V190" stroke="#61616b" stroke-width="2"/>
+  <path d="M75 207V154M510 269V235" stroke="#b67b86" stroke-width="3"/>
+  <g transform="rotate(-7 285 238)">
+    <rect x="131" y="130" width="298" height="217" rx="5" fill="#191b20" stroke="#484953"/>
+    <rect x="141" y="117" width="298" height="217" rx="5" fill="url(#panel)" stroke="#77717e"/>
+    <path d="M142 147H438" stroke="#736c7a"/>
+    <circle cx="157" cy="132" r="3" fill="#d29198"/><circle cx="169" cy="132" r="3" fill="#87818d"/><path d="M372 132H421" stroke="#9d939f" stroke-width="3"/>
+    <rect x="160" y="166" width="126" height="107" rx="2" fill="url(#campaign)"/>
+    <path d="M178 246L209 193L227 223L240 208L271 246Z" fill="#382c3b" fill-opacity=".8"/>
+    <circle cx="256" cy="188" r="9" fill="#f1c5a4"/>
+    <rect x="304" y="168" width="35" height="14" rx="2" fill="#9d697d"/><path d="M312 175H331" stroke="#f2d8d4" stroke-width="2"/>
+    <path d="M304 199H414M304 210H393M304 230H404" stroke="#c2b8c4" stroke-width="4"/>
+    <path d="M304 245H413" stroke="#807a89" stroke-width="3"/>
+    <rect x="304" y="259" width="84" height="21" rx="2" fill="#cda499"/><path d="M321 269H370" stroke="#4d3849" stroke-width="3"/>
+    <path d="M161 308H246" stroke="#a296a7" stroke-width="3"/>
+    <path d="M319 308L345 301L366 305L393 288L414 282" stroke="#dc9d86" stroke-width="2"/>
+    <circle cx="414" cy="282" r="3" fill="#f1c6a3"/>
+  </g>
+  <!-- Concentric targeting rings, with a selected audience at their center. -->
+  <circle cx="443" cy="111" r="59" fill="#24262c" stroke="#5c5763"/>
+  <circle cx="443" cy="111" r="45" stroke="#79707c" stroke-dasharray="3 6"/>
+  <circle cx="443" cy="111" r="31" stroke="url(#target)" stroke-width="3"/>
+  <circle cx="443" cy="105" r="7" fill="url(#target)"/>
+  <path d="M431 124C431 110 455 110 455 124" fill="url(#target)"/>
+  <path d="M443 44V59M443 163V178M376 111H391M495 111H510" stroke="#c39b9e" stroke-width="2"/>
+  <!-- A restrained search placement anchors the secondary channel. -->
+  <g transform="rotate(5 137 96)">
+    <rect x="67" y="66" width="197" height="43" rx="4" fill="#303139" stroke="#78707e"/>
+    <circle cx="89" cy="86" r="7" stroke="#d4c5cb" stroke-width="2"/>
+    <path d="M94 92L100 98" stroke="#d4c5cb" stroke-width="2"/>
+    <path d="M116 86H218" stroke="#a79aab" stroke-width="3"/>
+    <path d="M240 94V79M234 85L240 79L246 85" stroke="#dfa18b" stroke-width="2"/>
+  </g>
+  <circle cx="74" cy="228" r="4" fill="#b88091"/><circle cx="510" cy="296" r="4" fill="#d9a28c"/>
+</svg>

@@ -1,0 +1,160 @@
+.philosophy-section {
+  position: relative;
+  padding: 160px 0;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  border-top: 1px solid var(--border-color);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.philosophy-intro {
+  max-width: 600px;
+}
+
+.philosophy-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1.06;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.philosophy-paragraph {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.pillar-num-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32px;
+}
+
+.pillar-num {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.pillar-content {
+  flex-grow: 1;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pillar-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.pillar-desc {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .philosophy-intro {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: 100px 0;
+  }
+
+  .pillar-item {
+    gap: 1.2rem;
+  }
+
+  .pillar-title {
+    font-size: 1.4rem;
+  }
+
+  .pillar-desc {
+    font-size: 0.85rem;
+  }
+
+  .pillars-list {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .philosophy-section {
+    padding: 70px 0;
+  }
+
+  .philosophy-grid {
+    gap: 2.5rem;
+  }
+
+  .philosophy-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .pillar-item {
+    gap: 1rem;
+  }
+
+  .pillar-content {
+    padding-bottom: 1.5rem;
+  }
+
+  .pillar-title {
+    font-size: 1.25rem;
+  }
+
+  .pillar-desc {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .pillar-num-wrapper {
+    width: 24px;
+  }
+
+  .pillar-num {
+    font-size: 0.65rem;
+  }
+}
